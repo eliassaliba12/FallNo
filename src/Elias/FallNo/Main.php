@@ -14,13 +14,10 @@ public function onEnable() {
  $this->getServer()->getPluginManager()->registerevents(($this), $this);
  $this->saveResource("config.yml");
 }
-
 public function onFall(EntityDamageEvent $event) {
  if($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
-  $event->setCancelled();
-
-$player = $this->getPlayer();
-
- }elseif(in_array($player->getLevel()->getFolderName(), Main::get()->getConfig()->get("worlds"))) return;
+  $event->setCancelled();// cancels the event
+ }elseif(in_array($event->getPlayer()->getLevel()->getFolderName(), Main::get()->getConfig()->get("worlds"))){
+$event->setCancelled(false);
 }
 }
