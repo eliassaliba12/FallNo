@@ -21,3 +21,4 @@ public function onFall(EntityDamageEvent $event) {
 $event->setCancelled(false);
 }
 }
+}
