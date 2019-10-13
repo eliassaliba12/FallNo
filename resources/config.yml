@@ -1,4 +1,4 @@
 ---
-#enter the worlds name where you want fall damage activated
-worlds: ["world"]
+#enter the world name where you want fall damage activated
+worlds: ["world", "world2"]
 ...
