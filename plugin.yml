@@ -1,5 +1,5 @@
-name: FallNo
+name: NoFallDamage
 author: elias
 version: 1.0.0
 api: 3.0.0
-main: Elias\FallNo\Main
+main: Elias\NoFallDamage\Main
