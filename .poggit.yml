@@ -1,7 +1,7 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/eliassaliba12/FallNo
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/eliassaliba12/NoFallDamage
 branches:
 - master
 projects:
-  FallNo:
+  NoFallDamage:
     path: ""
 ...
