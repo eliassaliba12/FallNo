@@ -1,5 +1,5 @@
 name: NoFallDamage
-author: elias
+author: Elias
 version: 1.0.0
 api: 3.0.0
 main: Elias\NoFallDamage\Main
