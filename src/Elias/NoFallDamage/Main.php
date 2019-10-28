@@ -10,13 +10,16 @@ public function onEnable() {
  $this->getServer()->getPluginManager()->registerevents(($this), $this);
  $this->saveResource("config.yml");
 }
- public function onFall(EntityDamageEvent $event) {
-  if(in_array($event->getPlayer()->getLevel()->getFolderName(), Main::get()->getConfig()->get("worlds"))){
-      $event->setCancelled(false);
+ public function onFall(EntityDamageEvent $e): void{
+
+     $player = $e->getPlayer();
+
+  if(($e->getCause() === EntityDamageEvent::CAUSE_FALL)in_array($player->getLevel()->getFolderName(), Main::get()->getConfig()->get("worlds"))){
+      $e->setCancelled(false);
    return false;
  }
- if($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
-  $event->setCancelled();// cancels the event
+ if($e->getCause() === EntityDamageEvent::CAUSE_FALL) {
+  $e->setCancelled();// cancels the event
  }
  }
 }
