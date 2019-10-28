@@ -1,5 +1,5 @@
 <?php
-namespace Elias\FallNo;
+namespace Elias\NoFallDamage;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 use pocketmine\event\Listener;
