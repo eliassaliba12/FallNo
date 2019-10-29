@@ -12,14 +12,15 @@ public function onEnable() {
 }
  public function onFall(EntityDamageEvent $e): void{
 
-     $player = $e->getPlayer();
+if($e->getCause() === EntityDamageEvent::CAUSE_FALL){
 
-  if(($e->getCause() === EntityDamageEvent::CAUSE_FALL)in_array($player->getLevel()->getFolderName(), Main::get()->getConfig()->get("worlds"))){
-      $e->setCancelled(false);
-   return false;
- }
- if($e->getCause() === EntityDamageEvent::CAUSE_FALL) {
-  $e->setCancelled();// cancels the event
- }
- }
+$worlds_disabled = $config->get(“worlds”, []);
+
+foreach($worlds_disabled as $worlds){
+
+if(strtolower($e->getEntity()->getLevel()->getName()) === $worlds){
+}else {
+$event->setCancled();
+}
+}
 }
